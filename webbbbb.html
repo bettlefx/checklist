@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamTracking Project Structure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        .folder {
+            font-weight: bold;
+            color: #2A8CCA;
+        }
+        .file {
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TeamTracking Project Structure</h1>
+    <ul>
+        <li><input type="checkbox"> <span class="folder">TeamTracking/</span>
+            <ul>
+                <li><input type="checkbox"> <span class="folder">app/</span>
+                    <ul>
+                        <li><input type="checkbox"> <span class="folder">Actions/</span> (Action-based logic)</li>
+                        <li><input type="checkbox"> <span class="folder">Console/</span>
+                            <ul>
+                                <li><input type="checkbox"> <span class="folder">Commands/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> GenerateMonthlyReportCommand.php</li>
+                                        <li><input type="checkbox"> SystemHealthCheckCommand.php</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Events/</span>
+                            <ul>
+                                <li><input type="checkbox"> LeaveRequested.php</li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Http/</span>
+                            <ul>
+                                <li><input type="checkbox"> <span class="folder">Controllers/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> <span class="folder">Api/</span>
+                                            <ul>
+                                                <li><input type="checkbox"> AttendanceController.php</li>
+                                                <li><input type="checkbox"> LeaveController.php</li>
+                                                <li><input type="checkbox"> PerformanceController.php</li>
+                                                <li><input type="checkbox"> TrainingController.php</li>
+                                                <li><input type="checkbox"> ReportController.php</li>
+                                                <li><input type="checkbox"> MessagingController.php</li>
+                                            </ul>
+                                        </li>
+                                        <li><input type="checkbox"> <span class="folder">Web/</span>
+                                            <ul>
+                                                <li><input type="checkbox"> <span class="folder">Auth/</span>
+                                                    <ul>
+                                                        <li><input type="checkbox"> LoginController.php</li>
+                                                        <li><input type="checkbox"> RegisterController.php</li>
+                                                        <li><input type="checkbox"> ForgotPasswordController.php</li>
+                                                        <li><input type="checkbox"> ResetPasswordController.php</li>
+                                                    </ul>
+                                                </li>
+                                                <li><input type="checkbox"> DashboardController.php</li>
+                                            </ul>
+                                        </li>
+                                        <li><input type="checkbox"> UploadsController.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">Middleware/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> Authenticate.php</li>
+                                        <li><input type="checkbox"> EncryptCookies.php</li>
+                                        <li><input type="checkbox"> VerifyCsrfToken.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">Requests/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> AttendanceRequest.php</li>
+                                        <li><input type="checkbox"> LeaveRequest.php</li>
+                                        <li><input type="checkbox"> PerformanceRequest.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">Resources/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> EmployeeResource.php</li>
+                                        <li><input type="checkbox"> AttendanceResource.php</li>
+                                        <li><input type="checkbox"> LeaveResource.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">Filters/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> EmployeeFilter.php</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Jobs/</span>
+                            <ul>
+                                <li><input type="checkbox"> SendNotificationJob.php</li>
+                                <li><input type="checkbox"> GenerateReportJob.php</li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Listeners/</span>
+                            <ul>
+                                <li><input type="checkbox"> NotifyManager.php</li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Models/</span>
+                            <ul>
+                                <li><input type="checkbox"> Attendance.php</li>
+                                <li><input type="checkbox"> Leave.php</li>
+                                <li><input type="checkbox"> Performance.php</li>
+                                <li><input type="checkbox"> Training.php</li>
+                                <li><input type="checkbox"> Notification.php</li>
+                                <li><input type="checkbox"> Role.php</li>
+                                <li><input type="checkbox"> User.php</li>
+                                <li><input type="checkbox"> Team.php</li>
+                                <li><input type="checkbox"> AuditLog.php</li>
+                                <li><input type="checkbox"> Permission.php</li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Notifications/</span>
+                            <ul>
+                                <li><input type="checkbox"> MailNotification.php</li>
+                                <li><input type="checkbox"> SystemNotification.php</li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Policies/</span>
+                            <ul>
+                                <li><input type="checkbox"> AttendancePolicy.php</li>
+                                <li><input type="checkbox"> LeavePolicy.php</li>
+                                <li><input type="checkbox"> PermissionPolicy.php</li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Providers/</span> (Service providers)</li>
+                        <li><input type="checkbox"> <span class="folder">View/</span>
+                            <ul>
+                                <li><input type="checkbox"> <span class="folder">Components/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> AppLayout.php</li>
+                                        <li><input type="checkbox"> GuestLayout.php</li>
+                                        <li><input type="checkbox"> NavigationMenu.php</li>
+                                        <li><input type="checkbox"> Alert.php</li>
+                                        <li><input type="checkbox"> Card.php</li>
+                                        <li><input type="checkbox"> Modal.php</li>
+                                        <li><input type="checkbox"> Breadcrumbs.php</li>
+                                        <li><input type="checkbox"> Table.php</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><input type="checkbox"> <span class="folder">bootstrap/</span> (ระบบโหลดไฟล์หลัก)</li>
+                <li><input type="checkbox"> <span class="folder">config/</span>
+                    <ul>
+                        <li><input type="checkbox"> app.php</li>
+                        <li><input type="checkbox"> auth.php</li>
+                        <li><input type="checkbox"> database.php</li>
+                        <li><input type="checkbox"> (other configurations like cache, mail, session)</li>
+                    </ul>
+                </li>
+                <li><input type="checkbox"> <span class="folder">database/</span>
+                    <ul>
+                        <li><input type="checkbox"> <span class="folder">factories/</span> (ข้อมูลจำลอง)</li>
+                        <li><input type="checkbox"> <span class="folder">migrations/</span>
+                            <ul>
+                                <li><input type="checkbox"> create_users_table.php</li>
+                                <li><input type="checkbox"> create_employees_table.php</li>
+                                <li><input type="checkbox"> create_attendances_table.php</li>
+                                <li><input type="checkbox"> create_leaves_table.php</li>
+                                <li><input type="checkbox"> create_performances_table.php</li>
+                                <li><input type="checkbox"> create_trainings_table.php</li>
+                                <li><input type="checkbox"> create_notifications_table.php</li>
+                                <li><input type="checkbox"> create_roles_table.php</li>
+                                <li><input type="checkbox"> create_audit_logs_table.php</li>
+                                <li><input type="checkbox"> create_permissions_table.php</li>
+                                <li><input type="checkbox"> create_role_user_table.php</li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">seeders/</span> (ข้อมูลเริ่มต้น)</li>
+                    </ul>
+                </li>
+                <li><input type="checkbox"> <span class="folder">public/</span>
+                    <ul>
+                        <li><input type="checkbox"> index.php</li>
+                        <li><input type="checkbox"> favicon.ico</li>
+                        <li><input type="checkbox"> robots.txt</li>
+                        <li><input type="checkbox"> manifest.json</li>
+                        <li><input type="checkbox"> service-worker.js</li>
+                    </ul>
+                </li>
+                <li><input type="checkbox"> <span class="folder">resources/</span>
+                    <ul>
+                        <li><input type="checkbox"> <span class="folder">css/</span> (Frontend CSS)</li>
+                        <li><input type="checkbox"> <span class="folder">js/</span> (Frontend JavaScript)</li>
+                        <li><input type="checkbox"> <span class="folder">views/</span>
+                            <ul>
+                                <li><input type="checkbox"> <span class="folder">layouts/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> app.blade.php</li>
+                                        <li><input type="checkbox"> guest.blade.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">dashboard/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> index.blade.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">auth/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> login.blade.php</li>
+                                        <li><input type="checkbox"> register.blade.php</li>
+                                        <li><input type="checkbox"> forgot-password.blade.php</li>
+                                        <li><input type="checkbox"> reset-password.blade.php</li>
+                                        <li><input type="checkbox"> verify-email.blade.php</li>
+                                        <li><input type="checkbox"> two-factor-challenge.blade.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">profile/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> show.blade.php</li>
+                                        <li><input type="checkbox"> update-password-form.blade.php</li>
+                                        <li><input type="checkbox"> update-profile-information-form.blade.php</li>
+                                        <li><input type="checkbox"> delete-user-form.blade.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">components/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> navigation-menu.blade.php</li>
+                                        <li><input type="checkbox"> alert.blade.php</li>
+                                        <li><input type="checkbox"> card.blade.php</li>
+                                        <li><input type="checkbox"> modal.blade.php</li>
+                                        <li><input type="checkbox"> table.blade.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">reports/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> attendance-report.blade.php</li>
+                                        <li><input type="checkbox"> performance-report.blade.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">notifications/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> announcements.blade.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> <span class="folder">emails/</span>
+                                    <ul>
+                                        <li><input type="checkbox"> team-invitation.blade.php</li>
+                                    </ul>
+                                </li>
+                                <li><input type="checkbox"> terms.blade.php</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><input type="checkbox"> <span class="folder">routes/</span>
+                    <ul>
+                        <li><input type="checkbox"> api.php</li>
+                        <li><input type="checkbox"> web.php</li>
+                        <li><input type="checkbox"> console.php</li>
+                        <li><input type="checkbox"> channels.php</li>
+                    </ul>
+                </li>
+                <li><input type="checkbox"> <span class="folder">storage/</span>
+                    <ul>
+                        <li><input type="checkbox"> <span class="folder">uploads/</span></li>
+                        <li><input type="checkbox"> <span class="folder">logs/</span></li>
+                    </ul>
+                </li>
+                <li><input type="checkbox"> <span class="folder">tests/</span>
+                    <ul>
+                        <li><input type="checkbox"> <span class="folder">Feature/</span>
+                            <ul>
+                                <li><input type="checkbox"> <span class="folder">Api/</span> (API Tests)</li>
+                                <li><input type="checkbox"> <span class="folder">Web/</span> (Web Tests)</li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox"> <span class="folder">Unit/</span> (Unit Tests)</li>
+                    </ul>
+                </li>
+                <li><input type="checkbox"> .env</li>
+                <li><input type="checkbox"> composer.json</li>
+                <li><input type="checkbox"> README.md</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
